@@ -1,0 +1,8 @@
+<!-- User name: <input type="text" [(ngModel)]="userName"> -->
+
+<div class="flexBox">
+  <button class="my_button" (click)="search()" >ROLL</button>
+  <div  *ngIf="response" class="box">
+      <img src="{{response[0].url}}" alt="" class="photo">
+  </div>
+</div>
