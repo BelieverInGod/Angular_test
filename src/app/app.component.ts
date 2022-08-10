@@ -10,14 +10,20 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  userName: string = '';
   response: any;
+  value: any;
 
   constructor(private http: HttpClient) {
     
   }
+
+  setValue(prevValue: any) {
+    this.value = prevValue;
+    console.log(this.value)
+  }
+
   search() {
-    this.http.get('https://api.thecatapi.com/v1/images/search?api_key=6a109865-cc33-4e06-882a-d3cced0b56f5' + this.userName)
+    this.http.get('https://api.thecatapi.com/v1/images/search?api_key=6a109865-cc33-4e06-882a-d3cced0b56f5&limit=10&breed_ids=' + this.value)
     .subscribe(( response ) => {
       this.response = response;
       console.log(this.response)

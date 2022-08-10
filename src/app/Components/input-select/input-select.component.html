@@ -1,0 +1,14 @@
+<div class="InputBox">
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Select the cat's breed</mat-label>
+        <mat-select [(value)]="selected" (selectionChange)="searchByCategory($event)">
+        <mat-option [value]="item.id" *ngFor="
+        let item of response
+        ">{{item.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <p>You selected: {{selected}}</p>
+    
+</div>

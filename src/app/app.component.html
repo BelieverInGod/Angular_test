@@ -1,8 +1,10 @@
 <!-- User name: <input type="text" [(ngModel)]="userName"> -->
 
+
 <div class="flexBox">
+  <app-input-select (setValue)='setValue($event)'></app-input-select>
   <button class="my_button" (click)="search()" >ROLL</button>
-  <div  *ngIf="response" class="box">
-      <img src="{{response[0].url}}" alt="" class="photo">
+  <div *ngFor="let item of response" class="box">
+      <img  src="{{item.url}}" alt="" class="photo">
   </div>
 </div>

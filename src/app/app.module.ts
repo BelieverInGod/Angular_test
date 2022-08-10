@@ -6,16 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { InputSelectComponent } from './Components/input-select/input-select.component';
+import {MatSelectModule} from '@angular/material/select';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputSelectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
