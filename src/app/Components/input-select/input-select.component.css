@@ -2,6 +2,8 @@
     background: #ffd100;
     border-radius: 20px;
     transition: 0.5s;
+    align-items: center;
+    text-align: center;
 }
 
 .color:hover {

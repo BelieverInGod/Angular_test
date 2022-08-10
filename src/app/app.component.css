@@ -119,7 +119,6 @@
 }
 
 .pagination:hover {
-    background: #bee3db;
     color:black;
     box-shadow: 1px 1px 5px 0px #555b6e;
     border-radius: 20px;

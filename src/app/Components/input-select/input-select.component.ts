@@ -8,9 +8,8 @@ import { HttpClient } from '@angular/common/http'
 })
 export class InputSelectComponent implements OnInit {
   @Output() setValue = new EventEmitter();
-  public selected = 'All';
-  public response: any;
-  public value: any;
+  public selected = '';
+  public categories: any;
 
   constructor(private http: HttpClient) {
     
@@ -22,20 +21,13 @@ export class InputSelectComponent implements OnInit {
 
 
   searchByCategory(v: any) {
-    console.log(v.value)
       this.setValue.emit(v.value)
-      this.http.get(`https://api.thecatapi.com/v1/images/search?api_key=6a109865-cc33-4e06-882a-d3cced0b56f5&breed_ids=${v.value}`)
-      .subscribe(( response ) => {
-        console.log(response)
-      })
-
   }
 
   searchBreeds() {
     this.http.get('https://api.thecatapi.com/v1/breeds')
-    .subscribe(( response ) => {
-      this.response = response;
-      console.log(this.response)
+    .subscribe(( categories ) => {
+      this.categories = categories;
     })
   }
 }

@@ -3,10 +3,10 @@
     <mat-form-field appearance="fill" class="color">
         <mat-label>Select the cat's breed</mat-label>
         <mat-select [(value)]="selected" (selectionChange)="searchByCategory($event)">
-            <mat-option [value]="">All Breeds</mat-option>
-        <mat-option [value]="item.id" *ngFor="
-        let item of response
-        ">{{item.name}}</mat-option>
+            <mat-option value="">All Breeds</mat-option>
+            <mat-option [value]="item.id" *ngFor="
+            let item of categories
+            ">{{item.name}}</mat-option>
         </mat-select>
     </mat-form-field>
     

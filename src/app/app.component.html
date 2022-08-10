@@ -7,15 +7,12 @@
     <app-limit-select (setLimit)="setLimit($event)"  class="inputLimit"></app-limit-select>
     <app-input-select (setValue)='setValue($event)' class="inputBreed"></app-input-select>
   </div>
-  <button class="my_button" (click)="search()" (click)="toggle()">ROLL</button>
-  <div *ngFor="let item of response" class="box">
+  <button class="my_button" (click)="search()">ROLL</button>
+  <div *ngFor="let item of catsList" class="box">
       <img  src="{{item.url}}" alt="" class="photo">
   </div>
-  <div *ngFor="let item of responsePaginaton" class="box">
-    <img  src="{{item.url}}" alt="" class="photo">
-  </div>
   
-  <button class="pagination" (click)='upPagination()' (click)="addPagination()" [class.invisible]="visibility" (click)="toggle()">
+  <button class="pagination" (click)="addPagination()" [class.invisible]="catsList?.length" >
     ADD PICTURE
   </button>
 </div>
