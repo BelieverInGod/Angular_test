@@ -12,7 +12,6 @@ export class InputSelectComponent implements OnInit {
   public categories: any;
 
   constructor(private http: HttpClient) {
-    
   }
 
   ngOnInit(): void {

@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CatServiceService } from './cat-service.service';
 import { HttpClient } from '@angular/common/http'
-
-
 
 @Component({
   selector: 'app-root',

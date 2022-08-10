@@ -1,6 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-
 
 /** @title Select with 2-way value binding */
 @Component({
@@ -14,7 +12,7 @@ export class LimitSelectComponent implements OnInit {
   nums = [1, 5, 10, 15, 20, 25]
   limit = 10;
 
-  constructor(private http: HttpClient) {
+  constructor() {
     
   }
 
