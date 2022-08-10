@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { InputSelectComponent } from './Components/input-select/input-select.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { LimitSelectComponent } from './components/limit-select/limit-select.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InputSelectComponent,
+    LimitSelectComponent,
   ],
   imports: [
     BrowserModule,

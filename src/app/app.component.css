@@ -1,15 +1,54 @@
 .flexBox {
-    background: white;
+    position: relative;
+    background: #6f686698;
     margin-top: 50px;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 20px 10px rgba(0,0,0,0.75);
+    border-radius: 5px solid black;
     margin-inline: 15%;
     width: 70%;
     height: auto;
     align-items: center;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.InfoContainer {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-inline: 10%;
+    width: 80%;
+    height: 100px;
+    background: #000000f1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: message-box, sans-serif;
+}
+
+.InfoContainer h1 {
+    color: #ffd100;
+    text-align: center;
+    font-size: 400%;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.inputLimit {
+    margin: 25px;
+}
+
+.inputBreed  {
+    margin: 25px;
 }
 
 .box {
@@ -38,22 +77,52 @@
 
 .my_button {
     font-size: 100%;
-    font-family: 'Roboto', Courier, monospace;
-    margin: 50px;
-    background: white;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8407738095238095) 0%, rgba(255,209,0,1) 0%, rgb(215, 176, 0) 66%, rgb(240, 197, 1) 100%, rgb(214, 175, 0) 100%, rgba(95, 95, 95, 0.74) 100%);
     min-width: 100px;
     width: 20%;
     min-height: 50px;
     margin-bottom: 10px;
     border-radius: 15px;
     transition: 0.5s;
-    border: 1px solid black;
+    border: 0.5px solid #89b0ae;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .my_button:hover {
-    background: black;
-    color:white;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    color:black;
+    box-shadow: 1px 1px 5px 0px #555b6e;
     border-radius: 20px;
     transition: 0.5s;
 }
+
+.pagination {
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: none;
+    bottom: 0;
+    position: absolute;
+    font-family: 'Roboto', Courier, monospace;
+    margin: 50px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8407738095238095) 0%, rgba(255,209,0,1) 0%, rgb(215, 176, 0) 66%, rgb(240, 197, 1) 100%, rgb(214, 175, 0) 100%, rgba(95, 95, 95, 0.74) 100%);
+    min-width: 100px;
+    width: 20%;
+    min-height: 50px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    transition: 0.5s;
+    border: 0.5px solid #89b0ae;
+}
+
+.invisible {
+    display: block;
+}
+
+.pagination:hover {
+    background: #bee3db;
+    color:black;
+    box-shadow: 1px 1px 5px 0px #555b6e;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+

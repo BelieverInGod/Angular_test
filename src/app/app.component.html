@@ -2,9 +2,20 @@
 
 
 <div class="flexBox">
-  <app-input-select (setValue)='setValue($event)'></app-input-select>
-  <button class="my_button" (click)="search()" >ROLL</button>
+  <div class="InfoContainer"><h1>CATS LOVER</h1></div>
+  <div class="inputContainer">
+    <app-limit-select (setLimit)="setLimit($event)"  class="inputLimit"></app-limit-select>
+    <app-input-select (setValue)='setValue($event)' class="inputBreed"></app-input-select>
+  </div>
+  <button class="my_button" (click)="search()" (click)="toggle()">ROLL</button>
   <div *ngFor="let item of response" class="box">
       <img  src="{{item.url}}" alt="" class="photo">
   </div>
+  <div *ngFor="let item of responsePaginaton" class="box">
+    <img  src="{{item.url}}" alt="" class="photo">
+  </div>
+  
+  <button class="pagination" (click)='upPagination()' (click)="addPagination()" [class.invisible]="visibility" (click)="toggle()">
+    ADD PICTURE
+  </button>
 </div>

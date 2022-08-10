@@ -1,0 +1,9 @@
+<mat-form-field appearance="fill" class="color">
+    <mat-label>Select the limit</mat-label>
+    <mat-select [(value)]="selected" (selectionChange)="searchByLimit($event)" >
+        <mat-option [value]="item" *ngFor="
+        let item of nums
+        ">{{item}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
