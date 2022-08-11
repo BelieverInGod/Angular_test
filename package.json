@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start" : "node server.js",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "ng build --configuration production"
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +33,7 @@
     "@angular/cli": "^14.1.2",
     "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~4.0.0",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -54,6 +55,8 @@
     "url": "https://github.com/BelieverInGod/Angular_test/issues"
   },
   "homepage": "https://github.com/BelieverInGod/Angular_test#readme",
-  "engines": { "node": "18.0.0", "npm": "8.12.1" }
-  
+  "engines": {
+    "node": "18.0.0",
+    "npm": "8.12.1"
+  }
 }
